@@ -1,0 +1,24 @@
+{"level":"error","message":"Ошибка при регистрации: ReferenceError: sendVerificationEmail is not defined","timestamp":"2025-03-20T21:35:00.561Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ac3efd78e0csm36388666b.175 - gsmtp","timestamp":"2025-03-20T21:37:58.478Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ac3efd56a09sm36632866b.172 - gsmtp","timestamp":"2025-03-20T21:39:28.530Z"}
+{"level":"info","message":"Пользователь зарегистрирован: givoqkov11@gmail.dscdsom","timestamp":"2025-03-20T21:39:52.493Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-5ebcd0c74b9sm303129a12.62 - gsmtp","timestamp":"2025-03-20T21:43:19.956Z"}
+{"level":"info","message":"Пользователь вошел: test@test.ua","timestamp":"2025-03-20T21:47:23.733Z"}
+{"level":"info","message":"Пользователь вошел: test@test.ua","timestamp":"2025-03-20T22:22:51.208Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ac3efda2fc7sm41373666b.182 - gsmtp","timestamp":"2025-03-20T22:49:24.443Z"}
+{"level":"info","message":"Пользователь вошел: test12@test.com","timestamp":"2025-03-20T22:53:38.296Z"}
+{"level":"info","message":"Пользователь вошел: test12@test.com","timestamp":"2025-03-20T22:54:07.374Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-5ebcd0dfb33sm377354a12.68 - gsmtp","timestamp":"2025-03-20T23:03:54.833Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ac3efbdca5dsm43417266b.137 - gsmtp","timestamp":"2025-03-20T23:04:11.534Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ac3efbdc78esm44131766b.134 - gsmtp","timestamp":"2025-03-20T23:11:19.713Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-5ebcd0c74b9sm380207a12.62 - gsmtp","timestamp":"2025-03-20T23:12:51.573Z"}
+{"level":"info","message":"Пользователь зарегистрирован: testqq@test.coms","timestamp":"2025-03-20T23:13:34.776Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ac3ef93e1a5sm45254466b.79 - gsmtp","timestamp":"2025-03-20T23:16:57.804Z"}
+{"level":"error","message":"Ошибка при регистрации: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-5ebccfb4471sm398872a12.47 - gsmtp","timestamp":"2025-03-20T23:17:49.276Z"}
+{"level":"info","message":"Пользователь зарегистрирован: testassaasa@test.ua","timestamp":"2025-03-20T23:20:01.503Z"}
+{"level":"info","message":"Пользователь зарегистрирован: test@test.uasaq","timestamp":"2025-03-20T23:21:18.259Z"}
+{"level":"info","message":"Пользователь зарегистрирован: givotkov11@gmail.com","timestamp":"2025-03-20T23:21:35.366Z"}
+{"level":"info","message":"Email подтвержден для: givotkov11@gmail.com","timestamp":"2025-03-20T23:21:59.855Z"}
+{"level":"info","message":"Пользователь вошел: givotkov11@gmail.com","timestamp":"2025-03-20T23:22:03.782Z"}
+{"level":"info","message":"Пользователь вошел: givotkov11@gmail.com","timestamp":"2025-03-20T23:22:29.609Z"}
+{"level":"info","message":"Пользователь вошел: givotkov11@gmail.com","timestamp":"2025-03-20T23:22:52.618Z"}
