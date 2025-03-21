@@ -13,14 +13,21 @@ export default function RegisterPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("/api/register", { email, password });
-      toast.success("Регистрация успешна!");
+      const res = await axios.post("/api/register", { email, password });
+  
+      toast.success(res.data?.message || "Регистрация успешна!");
       router.push("/auth/login");
     } catch (error) {
-      toast.error("Ошибка при регистрации. Пожалуйста, попробуйте снова.");
-      console.error(error);
+      console.error("Ошибка регистрации:", error);
+  
+      if (axios.isAxiosError(error) && error.response) {
+        toast.error(error.response.data?.message || "Ошибка при регистрации.");
+      } else {
+        toast.error("Ошибка сети. Попробуйте позже.");
+      }
     }
   };
+  
 
   return (
     <div className="flex items-center justify-center min-h-screen">
