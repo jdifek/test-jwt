@@ -2,15 +2,17 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation"; 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Lock } from "lucide-react";
 import MainLayout from "@/app/components/MainLayout";
 
-export default function ResetPasswordClient({ token }: { token?: string }) {
+export default function ResetPasswordClient() {
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams(); 
+  const token = searchParams.get("token") || undefined; 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

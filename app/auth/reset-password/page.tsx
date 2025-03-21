@@ -1,16 +1,11 @@
 import { Suspense } from "react";
 import ResetPasswordClient from "./ResetPasswordClient";
 
-interface PageProps {
-  searchParams: Record<string, string | string[] | undefined>;
-}
-
-export default function ResetPasswordPage({ searchParams }: PageProps) {
-  const token = typeof searchParams.token === "string" ? searchParams.token : undefined;
-
+// Убираем PageProps, так как searchParams больше не нужен
+export default function ResetPasswordPage() {
   return (
     <Suspense fallback={<div className="text-center p-6">Загрузка...</div>}>
-      <ResetPasswordClient token={token} />
+      <ResetPasswordClient />
     </Suspense>
   );
 }
