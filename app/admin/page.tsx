@@ -21,8 +21,10 @@ export default function AdminPage() {
     <div className="p-6">
       <h1 className="text-2xl mb-4">Админ-панель</h1>
       <ul>
-        {users.map((u: any) => (
-          <li key={u.id}>{u.email} - {u.role}</li>
+        {users.map((u: { id: string; email: string; role: string }) => (
+          <li key={u.id}>
+            {u.email} - {u.role}
+          </li>
         ))}
       </ul>
     </div>

@@ -1,11 +1,12 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { NextAuthOptions } from "next-auth";
 import prisma from "@/lib/db";
 import { generateTokens, verifyPassword } from "@/lib/auth";
 import logger from "@/lib/logger";
+import { NextAuthOptions } from "next-auth";
 
-export const authOptions: NextAuthOptions = {
+// Определяем authOptions внутри файла
+const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
@@ -23,10 +24,7 @@ export const authOptions: NextAuthOptions = {
           where: { email: credentials.email },
         });
 
-        if (
-          !user ||
-          !(await verifyPassword(credentials.password, user.password))
-        ) {
+        if (!user || !(await verifyPassword(credentials.password, user.password))) {
           throw new Error("Неверные данные");
         }
 
@@ -78,6 +76,8 @@ export const authOptions: NextAuthOptions = {
         id: token.id as string,
         email: token.email as string,
         role: token.role as string,
+        accessToken: token.accessToken as string,
+        refreshToken: token.refreshToken as string,
       };
       session.accessToken = token.accessToken as string;
       session.refreshToken = token.refreshToken as string;
@@ -89,5 +89,8 @@ export const authOptions: NextAuthOptions = {
   },
 };
 
+// Создаем обработчик NextAuth
 const handler = NextAuth(authOptions);
+
+// Экспортируем только функции HTTP-методов
 export { handler as GET, handler as POST };
