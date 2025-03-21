@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/stores/useAuthStore";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Mail, Lock } from "lucide-react";
+import Link from "next/link";
+import MainLayout from "@/app/components/MainLayout";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -33,28 +36,76 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <form onSubmit={handleSubmit} className="p-6 bg-white rounded shadow-md">
-        <h1 className="text-2xl mb-4">Вход</h1>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="mb-4 p-2 border w-full"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Пароль"
-          className="mb-4 p-2 border w-full"
-        />
-        <button type="submit" className="p-2 bg-blue-500 text-white w-full">
-          Войти
-        </button>
-      </form>
+    <MainLayout>
+      <div className="max-w-md mx-auto">
+        <div className="bg-white p-8 rounded-lg shadow-md">
+          <h1 className="text-2xl font-bold text-center mb-6">Вход в систему</h1>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Mail className="h-5 w-5 text-gray-400" />
+                </div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Пароль
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Lock className="h-5 w-5 text-gray-400" />
+                </div>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="••••••••"
+                  required
+                />
+              </div>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition"
+            >
+              Войти
+            </button>
+          </form>
+          <div className="mt-4 text-center">
+            <Link
+              href="/auth/forgot-password"
+              className="text-sm text-blue-600 hover:text-blue-800"
+            >
+              Забыли пароль?
+            </Link>
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600">
+              Нет аккаунта?{" "}
+              <Link
+                href="/auth/register"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                Зарегистрироваться
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
       <ToastContainer />
-    </div>
+    </MainLayout>
   );
 }

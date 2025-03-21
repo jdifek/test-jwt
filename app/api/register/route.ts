@@ -31,7 +31,6 @@ export async function POST(req: NextRequest) {
     const verificationToken = generateVerificationToken();
     console.log(verificationToken + 'verificationToken');
     
-
     await prisma.user.create({
       data: {
         email,
