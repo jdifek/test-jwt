@@ -27,8 +27,8 @@ export default function LoginPage() {
       router.push("/dashboard");
       toast.success("Вход успешен!");
     } else {
-      toast.error("Ошибка при входе. Проверьте данные и попробуйте снова.");
-      console.error(res?.error);
+      console.error("Ошибка входа:", res?.error);
+      toast.error(res?.error || "Ошибка при входе. Проверьте данные.");
     }
   };
 
